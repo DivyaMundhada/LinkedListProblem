@@ -23,6 +23,18 @@ public class LinkedList {
 
 	}
 
+	public void appendAfter(Node Node) {
+		if (this.head == null) {
+			this.head = Node;
+		}
+		if (this.tail == null) {
+			this.tail = Node;
+		} else {
+			this.tail.setNext(Node);
+			this.tail = Node;
+		}
+	}
+
 	public void printNode() {
 		StringBuffer Node = new StringBuffer("My Nodes: ");
 		Node tempNode = head;
@@ -35,4 +47,5 @@ public class LinkedList {
 		Node.append(tempNode.getData());
 		System.out.println(Node);
 	}
+
 }
